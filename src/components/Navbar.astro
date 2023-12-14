@@ -1,35 +1,34 @@
 ---
-import Navbutton from "../components/Navbutton.astro"
+import Navbutton from "../components/Navbutton.astro";
 ---
 
 <ul id="navbar">
-    <Navbutton label="Home" path="index.html"></Navbutton>
-    <Navbutton label="tests" path="tests.html"></Navbutton>
-    <Navbutton label="Programme" path="programme.html"></Navbutton>
-    <Navbutton label="Map / booths" path="mapbooths.html"></Navbutton>
-    <Navbutton label="About" path="about.html"></Navbutton>
-    <Navbutton label="Contact" path="contact.html"></Navbutton>
+  <Navbutton label="Home" path="index.html" />
+  <Navbutton label="tests" path="tests.html" />
+  <Navbutton label="Programme" path="programme.html" />
+  <Navbutton label="Map / booths" path="mapbooths.html" />
+  <Navbutton label="About" path="about.html" />
+  <Navbutton label="Contact" path="contact.html" />
 </ul>
 
 <style>
-    ul {
-        display: none;
-        width: 100%;
-        height: 32px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        /* background: #fff; */
-        padding: 0;
-        margin: 0;
-    }
+  ul {
+    display: none;
+    width: 100%;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /* background: #fff; */
+    padding: 0;
+    margin: 0;
+  }
 
-    /* @media screen and (max-width: 1024px) {
-        ul{
-            /* position: absolute; */
-            flex-direction: column;
-            bottom: 0;
-        }
-        
-    } */
+  @media screen and (max-width: 1024px) {
+    ul {
+      /* position: absolute; */
+      flex-direction: column;
+      bottom: 0;
+    }
+  }
 </style>
