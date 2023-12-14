@@ -1,0 +1,66 @@
+---
+const label = Astro.props.label
+const path = Astro.props.path
+---
+
+<li id={path}><a href = {path}>{label}</a></li>
+
+<style>
+    li {
+        display: flex;
+        height: 100%;
+        border-radius: var(--br-5);
+        border: none;
+        background-color: initial;
+        font-weight: var(--navbutton-desk-font-weight);
+        font-size: var(----navbutton-desk-font-size);
+        text-transform: var(--navbutton-desk-text-case);
+        transition: var(--standard-transition);
+    }
+
+    li:target {
+        background-color: var(--nav-bg-current);
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        align-content: center;
+        padding: 0 1em;
+        text-decoration: var(--navbutton-desk-text-decoration);
+        color: var(--nav-text);
+    }
+
+    li:hover {
+        background-color: var(--nav-bg-hovered);
+        scale: var(--hoverskala);
+    }
+
+    li:active {
+        background-color: var(--nav-bg-current);
+        color: var(--white-text);
+        scale: var(--activeskala);
+    }
+
+    @media screen and (max-width: 1024px) {
+        li {
+            /* display: flex; */
+            /* width: 100%; */
+            /* border: 1px solid black; */
+            font-weight: var(--navbutton-mobile-font-weight);
+            font-size: var(----navbutton-mobile-font-size);
+            text-transform: var(--navbutton-mobile-text-case);
+            transition: var(--standard-transition);
+        }
+        a {
+            /* display: flex; */
+            /* border: 1px solid red; */
+            width: 100%;
+            justify-content: right;
+            padding: 0 var(--spacing-normal);
+            text-decoration: var(--navbutton-mobile-text-decoration);
+            color: var(--nav-text);
+        }
+    }
+</style>
